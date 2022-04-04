@@ -5,10 +5,12 @@ import ToDoItem from "./ToDoItem";
 import { Droppable } from 'react-beautiful-dnd';
 
 interface Props {
-    todos: ToDo[];
-    setToDos: React.Dispatch<React.SetStateAction<ToDo[]>>;
-    completedToDos: ToDo[];
-    setCompletedToDos: React.Dispatch<React.SetStateAction<ToDo[]>>;
+    
+    todos: Array<ToDo>;
+    setToDos: React.Dispatch<React.SetStateAction<Array<ToDo>>>;
+
+    completedToDos: Array<ToDo>;
+    setCompletedToDos: React.Dispatch<React.SetStateAction<Array<ToDo>>>;
 }
 
 const ToDoList: React.FC<Props> = ({ todos, setToDos, completedToDos, setCompletedToDos }: Props) => {
@@ -51,7 +53,7 @@ const ToDoList: React.FC<Props> = ({ todos, setToDos, completedToDos, setComplet
                                 <Typography textAlign="center" variant='h3' py={2}>Completed Tasks
                                 </Typography>
                                 {
-                                    completedToDos.map((todo, index) => (
+                                    completedToDos?.map((todo, index) => (
                                         <ToDoItem
                                             index={index}
                                             todo={todo}
