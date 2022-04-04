@@ -49,8 +49,8 @@ const InputTask: React.FC<Props> = ({ todo, setToDo, handleAdd }: Props) => {
       <Input border={1} >
         <StyledInputBase
           ref={inputRef}
-          placeholder="Search…"
-          inputProps={{ 'aria-label': 'search' }}
+          placeholder="Enter a task..."
+          inputProps={{ 'aria-label': 'task' }}
           type="input"
           value={todo}
           onChange={(e) => setToDo(e.target.value)}
