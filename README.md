@@ -1,4 +1,6 @@
-Following Tutorial https://github.com/piyush-eon/react-typescript-taskify 
+Following Tutorial 
+https://github.com/piyush-eon/react-typescript-taskify 
+https://www.youtube.com/watch?v=FJDVKeh7RJI&t=4746s
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
