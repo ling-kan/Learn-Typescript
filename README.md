@@ -1,8 +1,6 @@
-Following Tutorial 
-https://github.com/piyush-eon/react-typescript-taskify 
-https://www.youtube.com/watch?v=FJDVKeh7RJI&t=4746s
+Following Tutorial - https://www.youtube.com/watch?v=FJDVKeh7RJI&t=4746s
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img width="1056" alt="Screenshot 2022-04-05 at 10 05 20 am" src="https://user-images.githubusercontent.com/32935646/161719668-c242ee9b-23e7-4ef1-a78d-bcdf883929a4.png">
 
 ## Available Scripts
 
@@ -41,8 +39,4 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
