@@ -1,13 +1,16 @@
 
 # Learn Typescript
-Tutorial - https://www.youtube.com/watch?v=FJDVKeh7RJI&t=4746s
-
-<img width="500" alt="Screenshot 2022-04-05 at 10 05 20 am" src="https://user-images.githubusercontent.com/32935646/161719668-c242ee9b-23e7-4ef1-a78d-bcdf883929a4.png">
 
 ## 🚩 Table of Contents
 
 1. [Startup Scripts](#startup-scripts)
+2. [Project Info](#project-info)
 
+
+## Project Info
+Tutorial - https://www.youtube.com/watch?v=FJDVKeh7RJI&t=4746s
+
+<img width="500" alt="Screenshot 2022-04-05 at 10 05 20 am" src="https://user-images.githubusercontent.com/32935646/161719668-c242ee9b-23e7-4ef1-a78d-bcdf883929a4.png">
 
 ## Startup Scripts
 
