@@ -4,6 +4,7 @@ import InputTask from './component/InputTask';
 import ToDoList from './component/ToDoList';
 import { ToDo } from "./model";
 import { DragDropContext, DropResult} from 'react-beautiful-dnd'
+
 const App: React.FC = () => {
   const [todo, setToDo] = useState<string>("");
   const [todos, setToDos] = useState<ToDo[]>([]);
@@ -21,8 +22,6 @@ const App: React.FC = () => {
   const onDragEnd = (result: DropResult) => {
     const { destination, source } = result;
 
-    console.log(result);
-
     if (!destination) {
       return;
     }
@@ -37,6 +36,7 @@ const App: React.FC = () => {
     let add;
     let active = todos;
     let complete = completedToDos;
+
     // Source Logic
     if (source.droppableId === "ToDosList") {
       add = active[source.index];

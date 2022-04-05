@@ -1,4 +1,4 @@
-import { Card, CardContent, Grid, Typography } from "@mui/material";
+import { Card, CardContent, Grid, Typography, TextField } from "@mui/material";
 import React, { useRef, useState, useEffect } from "react";
 import { ToDo } from "../model";
 import EditIcon from '@mui/icons-material/Edit';
@@ -48,21 +48,22 @@ const ToDoItem = ({ index, todo, todos, setToDos }: Props) => {
                     <CardContent>
                         <form onSubmit={(e) => handleEdit(e, todo.id)}>
                             {edit ? (
-                                <input value={editToDo} onChange={(e) => setEditToDo(e.target.value)} />
+                                <TextField fullWidth id="fullWidth" value={editToDo} onChange={(e) => setEditToDo(e.target.value)} />
                             ) : todo.isDone ? (
-                                <Typography component="body" sx={{ textDecoration: "line-through" }}> {todo.todo}</Typography>
+                                <Typography variant="body1" sx={{ textDecoration: "line-through" }}> {todo.todo}</Typography>
                             ) : (
-                                <Typography component="body" > {todo.todo}</Typography>
+                                <Typography variant="body1" > {todo.todo}</Typography>
                             )}
 
-                            <Grid container spacing={2} mt={2}>
-                                <Grid item xs={4}>
+                            <Grid container spacing={2} mt={2} alignItems="center"
+                                justifyContent="end">
+                                <Grid item xs={1}>
                                     <EditIcon fontSize="medium" onClick={() => { !edit && !todo.isDone && setEdit(!edit) }} />
                                 </Grid>
-                                <Grid item xs={4}>
+                                <Grid item xs={1}>
                                     <DeleteIcon fontSize="medium" onClick={() => handleDelete(todo.id)} />
                                 </Grid>
-                                <Grid item xs={4}>
+                                <Grid item xs={1}>
                                     <DoneIcon fontSize="medium" onClick={() => handleDone(todo.id)} />
                                 </Grid>
                             </Grid>

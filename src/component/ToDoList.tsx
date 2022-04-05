@@ -5,7 +5,7 @@ import ToDoItem from "./ToDoItem";
 import { Droppable } from 'react-beautiful-dnd';
 
 interface Props {
-    
+
     todos: Array<ToDo>;
     setToDos: React.Dispatch<React.SetStateAction<Array<ToDo>>>;
 
@@ -15,16 +15,15 @@ interface Props {
 
 const ToDoList: React.FC<Props> = ({ todos, setToDos, completedToDos, setCompletedToDos }: Props) => {
     return (
-        <Grid container mt={5}>
+        <Grid container mt={1} spacing={2}>
             <Grid item xs={6} >
                 <Box
-                    bgcolor="primary.main"
-                    minHeight="100vh"
+                    sx={{ minHeight: "70vh", bgcolor: "primary.light", borderRadius: 3 }}
                 >
                     <Droppable droppableId="ToDosList">
                         {(provided, snapshot) => (
                             <div ref={provided.innerRef} {...provided.droppableProps} >
-                                <Typography variant='h3' textAlign="center" py={2}>Active Tasks
+                                <Typography variant='h2' textAlign="center" py={2}>Active Tasks
                                 </Typography>
                                 {todos?.map((todo, index) => (
                                     <ToDoItem
@@ -44,20 +43,19 @@ const ToDoList: React.FC<Props> = ({ todos, setToDos, completedToDos, setComplet
 
             <Grid item xs={6}>
                 <Box
-                    bgcolor="warning.main"
-                    minHeight="100vh"
+                    sx={{ minHeight: "70vh", bgcolor: "secondary.light", borderRadius: 3 }}
                 >
                     <Droppable droppableId="ToDosRemove">
                         {(provided, snapshot) => (
                             <div ref={provided.innerRef} {...provided.droppableProps}>
-                                <Typography textAlign="center" variant='h3' py={2}>Completed Tasks
+                                <Typography textAlign="center" variant='h2' py={2}>Completed Tasks
                                 </Typography>
                                 {
                                     completedToDos?.map((todo, index) => (
                                         <ToDoItem
                                             index={index}
                                             todo={todo}
-                                            key={todo.id} 
+                                            key={todo.id}
                                             todos={completedToDos} setToDos={setCompletedToDos} />
                                     ))
                                 }
@@ -67,7 +65,6 @@ const ToDoList: React.FC<Props> = ({ todos, setToDos, completedToDos, setComplet
                     </Droppable>
                 </Box>
             </Grid>
-
         </Grid >
     )
 };
